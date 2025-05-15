@@ -16,7 +16,7 @@ const Login = () => {
     setError('');
 
     try {
-      const res = await axios.post(`http://localhost:3000/user/${role}/login`, form);
+      const res = await axios.post(`/api/user/${role}/login`, form);
       const { token, user } = res.data;
 
       localStorage.setItem('logintoken', token);
